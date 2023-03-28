@@ -1,1 +1,1 @@
-# first-java-project
+# first-spring-project
