@@ -9,6 +9,11 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
+
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -17,7 +22,11 @@ public class Restaurant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
+
+    @OneToMany(mappedBy="restaurant", orphanRemoval = true, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<DiningReview> DiningReviews;
+
 
     @Column(name = "NAME")
     @Getter
