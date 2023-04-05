@@ -16,30 +16,11 @@ import java.util.List;
 
 @Entity
 @NoArgsConstructor
-@Table(name = "RESTAURANTS")
-public class Restaurant {
+@Table(name = "ADMIN_REVIEW_ACTION")
+public class AdminReviewAction{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @OneToMany(mappedBy="restaurant", orphanRemoval = true, fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<DiningReview> DiningReviews;
-
-
-    @Column(name = "NAME")
+    @Column(name = "IS_REVIEW_ACCEPTED")
     @Getter
     @Setter
-    private String name;
-
-    @Column(name = "CUISINE")
-    @Getter
-    @Setter
-    private String cuisine;
-
-    @Column(name = "ADDRESS")
-    @Getter
-    @Setter
-    private String address;
-
+    private Boolean isReviewAccepted;
 }

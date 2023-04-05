@@ -13,6 +13,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 import javax.persistence.FetchType;
 
 @Entity
@@ -20,6 +22,10 @@ import javax.persistence.FetchType;
 @Table(name = "DINING_REVIEWS")
 public class DiningReview{
 
+    private enum Status {
+        APPROVED, PENDING, DENIED
+    };
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -34,6 +40,12 @@ public class DiningReview{
     @Getter
     @Setter
     private Restaurant restaurant;
+
+    @Column(name = "STATUS")
+    @Enumerated(EnumType.ORDINAL)
+    @Getter
+    @Setter
+    private Status status;
 
     @Column(name = "PEANUT_SCORE")
     @Getter
