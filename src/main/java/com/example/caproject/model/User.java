@@ -6,19 +6,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.ManyToOne;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.JoinColumn;
-import javax.persistence.FetchType;
 
 @Entity
 @NoArgsConstructor
 @Table(name = "USERS")
-public class Users{
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
