@@ -30,10 +30,11 @@ public class DiningReview{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "SUBMITTED_BY")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "SUBMITTED_BY")
     @Getter
     @Setter
-    private String submittedBy;
+    private User user;
 
     @ManyToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurantId")
