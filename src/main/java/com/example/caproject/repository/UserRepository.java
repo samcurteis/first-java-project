@@ -9,6 +9,6 @@ import org.springframework.data.repository.CrudRepository;
 import com.example.caproject.model.User;
 
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends CrudRepository<User, Integer> {
   public List<User> findByUserName(String userName);
 }

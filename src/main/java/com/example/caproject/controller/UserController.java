@@ -32,29 +32,29 @@ public class UserController {
 }
 
 @PostMapping()
-public User createNewUser(@RequUsersestBody User user) {
+public User createNewUser(@RequestBody User user) {
 User newUser = this.userRepository.save(user);
   return newUser;
 }
 
 @PutMapping("/{id}")
-public User editUswer(@PathVariable int id, @ReqUsersuestBody User user) {
- Optional<>User userOptional = this.userRepository.findById(id);
+public User editUswer(@PathVariable int id, @RequestBody User user) {
+ Optional<User> userOptional = this.userRepository.findById(id);
  if (!userOptional.isPresent()) {
 throw new ResponseStatusException(HttpStatus.NOT_FOUND);
  }
 User userToUpdate = userOptional.get();
-}
 User updatedUser = this.userRepository.save(userToUpdate);
 return updatedUser;
-}
+};
+
 
 @DeleteMapping("/{id}")
-public User deleteUser(@PathVariable int id) Users{
-  Optional<>User userOptional = this.userRepository.findById(id);
+public User deleteUser(@PathVariable int id) {
+  Optional<User> userOptional = this.userRepository.findById(id);
   if (!userOptional.isPresent()) {
     throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User with that id does not exist.");
-  } else Users{
+  } else {
     this.userRepository.deleteById(id);
     throw new ResponseStatusException(HttpStatus.NO_CONTENT, "User successfully deleted.");
   }
