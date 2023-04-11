@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.caproject.model.User;
+import com.example.caproject.model.Restaurant;
 
 @Repository
-public interface RestaurantRepository extends CrudRepository<User, Integer> {
-  public List<User> findByName(String userName);
+public interface RestaurantRepository extends CrudRepository<Restaurant, Integer> {
+  public List<Restaurant> findByName(String name);
 }

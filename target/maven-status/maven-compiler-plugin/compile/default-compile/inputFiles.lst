@@ -1,0 +1,12 @@
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/repository/UserRepository.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/model/User.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/repository/DiningReviewRepository.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/controller/UserController.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/model/AdminReviewAction.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/model/DiningReview.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/repo/Test.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/CaProjectApplication.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/model/Restaurant.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/repository/RestaurantRepository.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/controller/RestaurantController.java
+/Users/sam/projects/first-spring-api/src/main/java/com/example/caproject/controller/DiningReviewController.java

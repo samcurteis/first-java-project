@@ -3,7 +3,6 @@ package com.example.caproject.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.ManyToOne;
@@ -18,7 +17,6 @@ import jakarta.persistence.EnumType;
 import javax.persistence.FetchType;
 
 @Entity
-@NoArgsConstructor
 @Table(name = "DINING_REVIEWS")
 public class DiningReview{
 
@@ -66,6 +64,7 @@ public class DiningReview{
     @Column(name = "COMMENTARY")
     @Getter
     @Setter
-    private int commentary;
+    private String commentary;
 
 }
+
